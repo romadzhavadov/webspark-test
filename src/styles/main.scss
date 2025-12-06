@@ -1,0 +1,65 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+@use './blocks/header';
+@use './blocks/footer';
+@use './blocks/datepicker';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+h3 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 836px;
+  margin: 0 auto;
+}
+
+
+.page {
+  position: relative;
+  width: 100%;          
+  min-height: 100vh;
+  margin: 0 auto;     
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  overflow: visible;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 752px;    
+  height: 482px;
+  background: url('/images/hero.png') no-repeat left top;
+  background-size: cover; 
+  z-index: 0;
+  pointer-events: none;
+}

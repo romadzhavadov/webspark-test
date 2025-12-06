@@ -1,0 +1,140 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  width: 100%;
+  height: 172px;
+  background-color: #FFFFFFAB;
+  padding: 6px 0 28px 0;
+  box-shadow:
+    0px 4px 24px 0px rgba(0, 0, 0, 0.12),
+    inset 0px 12px 24px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 2;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 86px;
+  }
+
+  &__logo {
+    width: 138px;
+    height: 138px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-family: $font-montserrat;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 2px;
+    border: 1px solid #3D8EDA;
+    background: transparent;
+
+    color: #3D8EDA;
+    font-weight: 400;  
+    font-size: 13px;
+    line-height: 100%;            
+    cursor: default;
+  }
+
+
+  &__stats {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 19px;
+  }
+
+  &__stat {
+    font-weight: 500;  
+    font-size: 14px;
+    line-height: 100%;  
+  }
+
+  &__stat-value {
+    font-weight: 700;
+  }
+}
+
+
+.filters {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin-right: 11px;
+  }
+
+  &__field {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &--right {
+      margin-left: 22px;
+    }
+  }
+
+  &__input {
+    width: 112px;
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #000000;
+
+    &::placeholder {
+      color: #b3b3b3;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+
+  &__icon-button {
+    width: 24px;
+    border: none;
+    border-left: 1px solid #DEDEDE;
+    background: #F4F4F4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 1px;
+  }
+}
+
