@@ -54,9 +54,9 @@ img {
 .page::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 752px;    
+  top: -12px;
+  left: -61px;
+  width: 730px;    
   height: 482px;
   background: url('/images/hero.png') no-repeat left top;
   background-size: cover; 

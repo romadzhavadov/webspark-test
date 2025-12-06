@@ -1,6 +1,15 @@
+import 'flatpickr/dist/flatpickr.css'
 import './styles/main.scss'; 
 import flatpickr from 'flatpickr';
-import 'flatpickr/dist/flatpickr.css';
+import { english } from 'flatpickr/dist/l10n/default.js';
+
+flatpickr.localize({
+  ...english,
+  weekdays: {
+    shorthand: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+    longhand: english.weekdays.longhand,
+  },
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const fromInput = document.querySelector<HTMLInputElement>('#date-from');
@@ -9,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // FROM
   if (fromInput) {
     const fpFrom = flatpickr(fromInput, {
-      dateFormat: 'd_m_Y',      // 09_08_2016
+      dateFormat: 'd_m_Y',     
+      defaultDate: 'from',
+      monthSelectorType: 'static',  
       allowInput: true,
     });
 
@@ -28,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fpTo = flatpickr(toInput, {
       dateFormat: 'd_m_Y',
       defaultDate: '09_08_2016',  
+      monthSelectorType: 'static',
       allowInput: true,
     });
 
