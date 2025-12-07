@@ -2,7 +2,7 @@
 @use './mixins' as *;
 
 @use './blocks/header';
-@use './blocks/footer';
+@use './blocks/gallery';
 @use './blocks/datepicker';
 
 
@@ -38,6 +38,7 @@ img {
   width: 100%;
   max-width: 836px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 
@@ -46,7 +47,7 @@ img {
   width: 100%;          
   min-height: 100vh;
   margin: 0 auto;     
-  background-color: #fff; 
+  background-color: $color-bg;; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   overflow: visible;
 }
@@ -54,8 +55,8 @@ img {
 .page::before {
   content: "";
   position: absolute;
-  top: -12px;
-  left: -61px;
+  top: -34px;
+  left: 0;
   width: 730px;    
   height: 482px;
   background: url('/images/hero.png') no-repeat left top;
@@ -63,3 +64,49 @@ img {
   z-index: 0;
   pointer-events: none;
 }
+
+
+.page::after {
+  content: "";
+  position: absolute;
+  bottom: 41px;             
+  right: 0;            
+  width: 420px;           
+  height: 360px;
+  background: url('/images/hero-right.png') no-repeat right top;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+@media (max-width: 1024px) {
+  .page::before {
+    width: 540px;
+    height: 364px;
+    top: -20px;
+  }
+
+  .page::after {
+    width: 300px;
+    height: 260px;
+    bottom: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .page::before {
+    width: 360px;
+    top: -10px;
+    opacity: 0.6;          
+  }
+
+  .page::after {
+    width: 220px;
+    height: 180px;
+    bottom: 10px;
+    opacity: 0.6;
+  }
+}
+

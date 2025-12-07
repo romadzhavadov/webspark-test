@@ -23,6 +23,7 @@
   &__logo {
     width: 138px;
     height: 138px;
+    flex-shrink: 0;
     overflow: hidden;
 
     img {
@@ -138,3 +139,150 @@
   }
 }
 
+
+
+@media (max-width: 1024px) {
+  .header {
+    height: auto;              
+    padding: 8px 0 20px;
+
+    &__inner {
+      gap: 40px;
+    }
+
+    &__logo {
+      width: 110px;
+      height: 110px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__stats {
+      gap: 16px;
+    }
+  }
+
+  .filters {
+    &__label {
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    &__input {
+      width: 100px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0 16px;
+
+    &__inner {
+      flex-direction: column;   
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    &__logo {
+      width: 90px;
+      height: 90px;
+    }
+
+    &__profile {
+      align-items: center;
+    }
+
+    &__heading {
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__badge {
+      font-size: 12px;
+      padding: 4px 10px;
+    }
+
+    &__stats {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    &__stat {
+      font-size: 13px;
+    }
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    row-gap: 6px;
+    margin-top: 8px;
+
+    &__label {
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    &__field {
+      width: 48%;              
+      min-width: 150px;
+
+      &--right {
+        margin-left: 0;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      font-size: 12px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    &__icon-button {
+      width: 28px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__logo {
+      width: 72px;
+      height: 72px;
+    }
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__stats {
+      gap: 8px;
+    }
+  }
+
+  .filters {
+    &__field {
+      width: 100%;             
+    }
+  }
+}

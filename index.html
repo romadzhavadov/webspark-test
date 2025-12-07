@@ -114,88 +114,57 @@
 
       <main class="main">
         <section class="gallery gallery--rows" id="gallery">
-          <div class="gallery__inner">
-            <div class="gallery__list">
-              <!-- ОДНА розмітка картки, яка працює і в rows, і в tiles -->
+          <div class="container">
+            <div class="gallery__toolbar">
+              <div class="gallery__view-switch">
+                <button
+                  class="gallery__view-btn gallery__view-btn--rows is-active"
+                  type="button"
+                  data-view="rows"
+                  aria-label="Rows view"
+                >
+                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1"  y="0"  width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="9"  y="0"  width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="17" y="0"  width="6" height="6" rx="1" fill="#C8C8C8"/>
 
-              <article class="post">
-                <div class="post__image">
-                  <img src="/images/photo-1.jpg" alt="Post image 1" />
-                </div>
-                <div class="post__content">
-                  <div class="post__top">
-                    <div class="post__title">Today</div>
+                    <rect x="1"  y="8"  width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="9"  y="8"  width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="17" y="8"  width="6" height="6" rx="1" fill="#C8C8C8"/>
 
-                    <div class="post__stats">
-                      <div class="post__stat">
-                        <!-- тут заміниш на SVG-іконку -->
-                        <span class="post__icon">❤</span>
-                        <span class="post__value">128</span>
-                      </div>
-                      <div class="post__stat">
-                        <span class="post__icon">💬</span>
-                        <span class="post__value">31</span>
-                      </div>
-                      <div class="post__stat">
-                        <span class="post__icon">👁</span>
-                        <span class="post__value">22</span>
-                      </div>
-                    </div>
+                    <rect x="1"  y="16" width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="9"  y="16" width="6" height="6" rx="1" fill="#C8C8C8"/>
+                    <rect x="17" y="16" width="6" height="6" rx="1" fill="#C8C8C8"/>
+                  </svg>
+                </button>
 
-                    <div class="post__date">9-08-2016</div>
-                  </div>
-
-                  <div class="post__bottom">
-                    <span class="post__type">Image upload</span>
-                    <span class="post__created">11-04-2016</span>
-                  </div>
-                </div>
-              </article>
-
-              <!-- ще кілька таких же .post з іншими картинками/даними -->
-              <article class="post">
-                <div class="post__image">
-                  <img src="/images/photo-2.jpg" alt="Post image 2" />
-                </div>
-                <div class="post__content">
-                  <div class="post__top">
-                    <div class="post__title">Today</div>
-                    <div class="post__stats">
-                      <div class="post__stat">
-                        <span class="post__icon">❤</span>
-                        <span class="post__value">128</span>
-                      </div>
-                      <div class="post__stat">
-                        <span class="post__icon">💬</span>
-                        <span class="post__value">31</span>
-                      </div>
-                      <div class="post__stat">
-                        <span class="post__icon">👁</span>
-                        <span class="post__value">22</span>
-                      </div>
-                    </div>
-                    <div class="post__date">9-08-2016</div>
-                  </div>
-                  <div class="post__bottom">
-                    <span class="post__type">Image upload</span>
-                    <span class="post__created">11-04-2016</span>
-                  </div>
-                </div>
-              </article>
+                <button
+                  class="gallery__view-btn gallery__view-btn--tiles"
+                  type="button"
+                  data-view="tiles"
+                  aria-label="Tiles view"
+                >
+                  <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="6" height="6" fill="#C8C7C7"/>
+                    <rect y="8" width="6" height="6" fill="#C8C7C7"/>
+                    <rect y="16" width="6" height="6" fill="#C8C7C7"/>
+                    <rect x="9" y="10" width="15" height="2" fill="#C8C7C7"/>
+                    <rect x="9" y="18" width="15" height="2" fill="#C8C7C7"/>
+                    <rect x="9" y="2" width="15" height="2" fill="#C8C7C7"/>
+                  </svg>
+                </button>
+              </div>
             </div>
+            
+            <div class="gallery__list" id="gallery-list"></div>
 
             <button class="gallery__load-more" type="button">
               Load more
             </button>
           </div>
+
         </section>
       </main>
-
-      <footer class="footer">
-        <div class="footer__inner">
-          <p class="footer__text">© 2016 monblanproject</p>
-        </div>
-      </footer>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
